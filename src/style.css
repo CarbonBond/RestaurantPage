@@ -36,12 +36,7 @@ body{
     color: white;
     text-shadow: 0 0 5px black ;
 }
-@media only screen and (min-width:700px) {
-    .bannerContainer{
-        flex-direction: row;
-        position:sticky;
-    }
-}
+
 .icon{
     background: url('./pizza.png');
     background-size: contain;
@@ -82,6 +77,7 @@ body{
 }
 .tab{
     padding:0px 10px;
+    user-select: none;
 }
 .tab:hover{
     cursor: pointer;
@@ -94,33 +90,259 @@ body{
     justify-content:center;
 }
 .bodyContent{
-    width: 80%;
+    margin-top: 15px;
+    width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
 }
-.orderNow{
-    position: relative;
-    top: -20%;
-    width:40vmin;
-    height:12vmin;
-    min-width: 230px;
-    min-height: 60px;
-    border-radius: 15px;
-    box-shadow: 0 0 8px 3px black;
-    background-color: rgb(88, 105, 255);
+
+.aboutUsContainer{
+    width:100%;
     display:flex;
-    justify-content:center;
-    align-items: center;
-    font-size: 180%;
-    font-weight: bold;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-evenly;
+    padding:40px;
+}
+.whoAreWe{
+    font-size: 200%;
+    color: white;
+    text-shadow: 0 1px 12px black;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-.orderNow:hover{
-    background-color: rgb(56, 76, 255);
+.descContainer{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.aboutUsDescription{
+    color: white;
+    margin-top: 20px;
+}
+
+.contactContainer{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-shadow: 0 1px 12px black;
+}
+.infoContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 60%;
+    padding: 25px;
+}
+.infoItems{
+    flex:1;
+    font-size: 120%;
+}
+.formContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 60%;
+    padding: 25px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.orderContainer{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+    
+}
+
+.shadowText{
+    color: white;
+    text-shadow: 0 1px 12px black;
+}
+
+.orderSelection{
+    display: none;
+    border-left: 2px outset white;
+}
+
+.pizzaSel{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px groove rgb(255, 255, 255);
+}
+
+.selectionTopping{
+    display: flex;
+    flex:1;
+    flex-grow: 3;
+    flex-direction: column;
+    align-items: center;
+}
+.orderPizza{
+    flex:1.5;
+    min-height: 100%;
+    display:flex;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.shadowCover{
+    background-color: rgba(0, 0, 0, 0.704);
+}
+
+
+.orderPizza{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.pizza{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.pizzaOption{
+    flex:1;
+    text-align: center;
+    width:100%;
+}
+
+.pizzaTopping{
+    width:100%;
+}
+
+.pizzaDiv{
+    flex: 1;
+    border-radius: 50%;
+    border: 2px solid white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 1px rgb(133, 49, 23);
+    margin:10px;
+    max-width: 300px;
+    background-color: rgba(231, 166, 45, 0.479);
+}
+.pizzaSelected{
+    background-color: rgba(231, 150, 45, 0.822);
+
+}
+.pizzaDiv:after{
+    content: '';
+    display:block;
+    padding-bottom: 100%;
+}
+.pizzaDiv:hover{
     cursor: pointer;
+    box-shadow: 0 0 10px 1px rgb(231, 86, 42);
+
+}
+
+.toppingContainer{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.add{
+    color: rgba(72, 255, 0, 0.562);
+    border-radius: 0 30% 30% 0;
+}
+.toppingMod{
+    height: 30px;
+    width: 30px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    font-weight: bold;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     user-select: none;
-    box-shadow: 0 0 12px 4px black;
+}
+.toppingMod:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 1px rgb(255, 255, 255)
+}
+.sub{
+    color: rgba(255, 0, 0, 0.562);
+    border-radius: 30% 0 0 30%;
+}
+
+.topping{
+    width: 60%;
+    height: 30px;
+    margin: 20px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+@media only screen and (min-width:700px) {
+    .bannerContainer{
+        flex-direction: row;
+        position:sticky;
+    }
+    .bodyContent{
+        width: 60%;
+        min-width: 550px;
+        margin-top: 0;
+
+    }
+
+    .orderContainer{
+        flex-direction: row;
+        width:95vw;
+        min-height: 100%;
+        
+    }
+
+    .orderSelection{
+        flex:1;
+        flex-grow: 1;
+        display:flex;
+        flex-direction: column;
+        min-width: 350px;
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+    .pizza{
+        justify-content:center;
+    }
+}
+
+@media only screen and (min-width:1100px) {  
+    .descContainer{
+        flex-direction: row;
+    }
+    .aboutUsDescription{
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .contactContainer{
+        flex-direction: row;
+    }
+    .formContainer{
+        border-bottom: none;
+    }
+
+    .pizzaDiv{
+        margin:30px;
+    }
 
 }
